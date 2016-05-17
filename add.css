@@ -1,0 +1,61 @@
+body, h1, h2, h3, h4, th, #project_title, #project_tagline, .octicon, .octicon-link {
+  font-family:"ƒqƒ‰ƒMƒmŠpƒS Pro W3", "Hiragino Kaku Gothic Pro", "ƒƒCƒŠƒI", Meiryo, Osaka, "‚l‚r ‚oƒSƒVƒbƒN", "MS PGothic", sans-serif;
+
+}
+
+th {
+#  border: 2px white;
+}
+
+h4 {
+
+  text-indent: 2em;
+
+}
+
+#project_title {
+  font-size: 36px;
+  padding-top: 4px;
+  padding-bottom:6px;
+}
+
+
+#project_title a{
+  color: white;
+}
+
+
+#project_title a:hover{
+  color: #007edf;
+}
+
+
+#project_tagline {
+  font-size: 22px;
+  padding-bottom:6px;
+}
+
+
+#project_tagline a{
+  color: white;
+
+}
+
+#project_tagline a:hover {
+  color: #007edf;
+
+}
+
+td {
+  vertical-align: middle;
+
+}
+
+dt {
+  padding-bottom: 1em;
+
+}
+
+
+
+
