@@ -1,4 +1,4 @@
-body, h1, h2, h3, h4, th, #project_title, #project_tagline, #eng, .octicon, .octicon-link {
+body, h1, h2, h3, h4, th, #project_title, #project_tagline, #engp, .octicon, .octicon-link {
   font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 
 }
@@ -29,12 +29,12 @@ h4 {
   color: #007edf;
 }
 
-#eng a{
+#engp a{
   color: white;
 }
 
 
-#eng a:hover{
+#engp a:hover{
   color: #007edf;
 }
 
