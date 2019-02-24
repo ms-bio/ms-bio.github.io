@@ -51,29 +51,14 @@
         <h3>
 <a id="summary" class="anchor" href="/2017h.html" aria-hidden="true">第2回ハッカソン</a>開催報告</h3>
 
-<p>　またまた、たいへん遅くなってしまいましたが、第1回ハッカソンの開催報告を公開します。</p>
+<p>　またまた、たいへん遅くなってしまいましたが、第2回ハッカソンの開催報告を公開します。</p>
   
   
     <p>　第2回ハッカソンは、予定通り2018年7月15日（日）～7月20日（金）の足かけ6日間にわたって、徳島市の<a href="http://www.iams.tokushima-u.ac.jp/" target="_blank">徳島大学 先端酵素学研究所</a>（初日シンポジウム）と<a href="https://www.kanponoyado.japanpost.jp/tokushima/" target="_blank">かんぽの宿　徳島</a>（ハッカソン本体）で開催されました。</p>
     <p>　このハッカソンは（通常どおりの）<A href="https://www.jsbi.org/" target="_blank">日本バイオインフォマティクス学会(JSBi)</a>に加えて、<A href="https://www.katokinen.or.jp/" target="_blank">公益財団法人・加藤記念バイオサイエンス振興財団</A>から助成金を頂いて実行することができました。</p>
+    <p>　また、前回に引き続き今回も、<a href="http://www.rois.ac.jp/" target="_blank">情報・システム研究機構(ROIS)</a>・<a href="https://ds.rois.ac.jp/" target="_blank">データサイエンス共同利用基盤施設</a>・<a href="http://dbcls.rois.ac.jp/" target="_blank">ライフサイエンス統合データベースセンター(DBCLS)</a>が実施する、「<a href="http://wiki.lifesciencedb.jp/mw/BH18.7" target="_blank">国内版バイオハッカソン（以下「BH」）BH18.7</a>」と一体的に行いました。</p>
     
-<br>    
 
-    
-    <h3>ハッカソンの開催</h3>
-    
-    <p>　日本でのバイオインフォマティクス分野のハッカソンといえば、<a href="https://www.jst.go.jp/" target=_blank">科学技術振興機構(JST)</a>・<a href="https://biosciencedbc.jp/" target=_blank">バイオサイエンスデータベースセンター(NBDC)</a>が主催し、<a href="http://www.rois.ac.jp/" target=_blank">情報・システム研究機構(ROIS)</a>・<a href="http://dbcls.rois.ac.jp/" target=_blank">ライフサイエンス統合データベースセンター(DBCLS)</a>が共催する「<a href="http://www.biohackathon.org/" target=_blank">Biohackathon（国際開発者会議）</a>」、及びDBCLSが単独で主催する「<a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon" target=_blank">国内版バイオハッカソン（及びその簡易版としてのSPARQLthon）</a>」が最も有名です（実際には両方とも、DBCLSの同一グループが企画している）。ここではプログラミングに留まらず、生命科学で必要な情報解析のためのデータ解析やデータベース整備など、広い内容を含む開発／研究作業を行ってきており、例えば<a href="https://www.ncbi.nlm.nih.gov/pubmed/28486464" target=_blank">最近発表された</a>Omics Discovery Indexは、<a href="https://www.ebi.ac.uk/" target=_blank">EBI</a>の研究者が<a href="http://2014.biohackathon.org/" target=_blank">2014年に松島（仙台）で行われたBiohackathon</a>に招待されて参加したときに着想し、開発が始まったものでした。</p>
-<p>　このように、国際版であるBiohackathonは国際貢献と同時に、世界的な最先端の潮流を取材し、或いは共同作業を行う場であり、国内版バイオハッカソンは、国際版で得られた知見などを、国内により広く啓蒙していくのが目的です。</p>
-
-<img src="./images/2017h/display.jpg" width="620">
-
-    <p>　ハッカソンの開催には相当のノウハウが必要ですから、我々は最初から、DBCLSの関係者に相談して来ていました。しかしバイオハッカソンと我々のハッカソンでは、目標がかなり異なっています。</p>
-    <p>　DBCLSバイオハッカソンでは「<a href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%9E%E3%83%B3%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%82%A6%E3%82%A7%E3%83%96" target=_blank">セマンティック・ウェブ</a>による（<a href="https://ja.wikipedia.org/wiki/Resource_Description_Framework" target=_blank">RDF</a>を用いた）生命科学データベースの統合」が重要な目標です（これだけが目標ではないが、大きな目標であるのは確かです）。</p>
-<p>　これに対して質量分析関連分野では、RDFやセマンティック・ウェブは中心的な問題ではありません（もちろん、データベース統合には重要なので、質量分析関連分野の公的データベース、即ちメタボライトを中心とする<a href="http://www.massbank.jp/" target=_blank">MassBank</a>、糖鎖の一連のデータベース（<a href="https://glycosmos.org/" target=_blank">GlyCosmos</a>）、それにプロテオームの<a href="https://jpostdb.org/" target=_blank">jPOST</a>といったデータベースは、セマンティック・ウェブを念頭に置いたり、RDFを用いて開発されています。しかしそれ以外のところでRDFが必要になることは当面ありません）。むしろこの分野では、解析に必要な計算科学的な問題への対応が重要な目標です。</p>
-
-<p>　従ってバイオハッカソンと本ハッカソンは切り離して考えてきたのですが、財政的な面も考えるとやはり共同開催が効率的である、と判断し、最終的に、「別個のハッカソンを同じ会場で実施する」「両者（参加者）の交流は大いに推奨する」という考えに基づき、今年度のDBCLS「<a href="http://wiki.lifesciencedb.jp/mw/BH17.11" target=_blank">国内版バイオハッカソン（以下「BH」）BH17.11</a>」と一体的に行うことになりました。</p>
-    <p>　またこれを機に、ゲノム系の研究が中心である日本の（一般的な）バイオインフォマティクス研究コミュニティとの、交流・協力関係を深めることを目的に加えました。</p>
- 
 <br>
     
     <h3>ハッカソンの告知</h3>    
@@ -96,17 +81,16 @@
 </ul>
 
 
-          <p>　もし「他にこのような団体に広告を掲載した方がいい」といったご意見などがありましたら、本会世話人 (<a href="mailto:ms-bioinfo-admin@googlegroups.com">ms-bioinfo-admin@googlegroups.com</a>)　まで、もしくは<a href="mailto:ms-bioinfo@googlegroups.com">研究会メーリングリスト</a>までお寄せください。</p>
-
 <br>
     
     
         <h3>参加者について</h3>
 
-<img src="./images/2017h/attendee.png" width="650">
+<img src="./images/2018h/graphg_1.png" width="650">
     
-        <p style="font-size: 80%; color: navy;">　図中で、過去に一度でもDBCLSバイオハッカソンに参加した経験のある人は、「参加経験者」に分類した。
-「参加非経験者」は「本ハッカソン参加者の中で、バイオハッカソン(BH)参加経験のない人」（即ち、「全くの新規参加者」）。なお「バイオハッカソン(BH)側の参加者で、初参加の人」は、この「参加非経験者」の中にはカウントしていない（46人の中に含まれている）。
+        <p style="font-size: 80%; color: navy;">　図中で、　過去に一度でもDBCLSバイオハッカソンまたは第1回の質量分析インフォマティクス・ハッカソンに参加した経験のある人は、「参加経験者」に分類した。従って「参加非経験者」は「全くの新規参加者」。なお「バイオハッカソン(BH)側の参加者で、初参加の人」は、この「参加非経験者」の中にはカウントしていない。
+　或る参加者は過去にBHに参加していたが、2017年には質量分析側として参加し、今年は本務の関係でBHとして参加しているが、この場合2017年は青色の、今年は緑色のグループの一員としてカウントしている。
+
 </p>
     
 <br>
