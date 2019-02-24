@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ms-bio.GitHub.io : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./add.css">
+
+    <style type="text/css">
+.togo {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    background: #FFF;
+    border: solid 2px #6091d3;
+    border-radius: 12px;
+
+.togo p {
+    margin: 0; 
+    padding: 0;
+}
+    </style>
+        
+    <title>第2回ハッカソン開催報告：質量分析インフォマティクス研究会</title>
+  </head>
+
+  <body>
+
+     <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ms-bio">View on GitHub</a>
+
+            <h1 id="project_title"><a href="./index.html">ms-bio.info</a></h1>
+          <h3 id="project_tagline"><a href="./index.html">質量分析インフォマティクス研究会</a><span style="font-size: 70%;"> > 第2回ハッカソン開催報告</span></h3>
+
+          
+
+        </header>
+    </div>
+
+
+
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+<section id="main_content" class="inner">
+    
+
+    
+        <h3>
+<a id="summary" class="anchor" href="/2017h.html" aria-hidden="true">第2回ハッカソン</a>開催報告</h3>
+
+<p>　またまた、たいへん遅くなってしまいましたが、第1回ハッカソンの開催報告を公開します。</p>
+  
+  
+    <p>　第2回ハッカソンは、予定通り2018年7月15日（日）～7月20日（金）の足かけ6日間にわたって、徳島市の<a href="http://www.iams.tokushima-u.ac.jp/" target="_blank">徳島大学 先端酵素学研究所</a>（初日シンポジウム）と<a href="https://www.kanponoyado.japanpost.jp/tokushima/" target="_blank">かんぽの宿　徳島</a>（ハッカソン本体）で開催されました。</p>
+    <p>　このハッカソンは（通常どおりの）<A href="https://www.jsbi.org/" target="_blank">日本バイオインフォマティクス学会(JSBi)</a>に加えて、<A href="https://www.katokinen.or.jp/" target="_blank">公益財団法人・加藤記念バイオサイエンス振興財団</A>から助成金を頂いて実行することができました。</p>
+    
+<br>    
+
+    
+    <h3>ハッカソンの開催</h3>
+    
+    <p>　日本でのバイオインフォマティクス分野のハッカソンといえば、<a href="https://www.jst.go.jp/" target=_blank">科学技術振興機構(JST)</a>・<a href="https://biosciencedbc.jp/" target=_blank">バイオサイエンスデータベースセンター(NBDC)</a>が主催し、<a href="http://www.rois.ac.jp/" target=_blank">情報・システム研究機構(ROIS)</a>・<a href="http://dbcls.rois.ac.jp/" target=_blank">ライフサイエンス統合データベースセンター(DBCLS)</a>が共催する「<a href="http://www.biohackathon.org/" target=_blank">Biohackathon（国際開発者会議）</a>」、及びDBCLSが単独で主催する「<a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon" target=_blank">国内版バイオハッカソン（及びその簡易版としてのSPARQLthon）</a>」が最も有名です（実際には両方とも、DBCLSの同一グループが企画している）。ここではプログラミングに留まらず、生命科学で必要な情報解析のためのデータ解析やデータベース整備など、広い内容を含む開発／研究作業を行ってきており、例えば<a href="https://www.ncbi.nlm.nih.gov/pubmed/28486464" target=_blank">最近発表された</a>Omics Discovery Indexは、<a href="https://www.ebi.ac.uk/" target=_blank">EBI</a>の研究者が<a href="http://2014.biohackathon.org/" target=_blank">2014年に松島（仙台）で行われたBiohackathon</a>に招待されて参加したときに着想し、開発が始まったものでした。</p>
+<p>　このように、国際版であるBiohackathonは国際貢献と同時に、世界的な最先端の潮流を取材し、或いは共同作業を行う場であり、国内版バイオハッカソンは、国際版で得られた知見などを、国内により広く啓蒙していくのが目的です。</p>
+
+<img src="./images/2017h/display.jpg" width="620">
+
+    <p>　ハッカソンの開催には相当のノウハウが必要ですから、我々は最初から、DBCLSの関係者に相談して来ていました。しかしバイオハッカソンと我々のハッカソンでは、目標がかなり異なっています。</p>
+    <p>　DBCLSバイオハッカソンでは「<a href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%9E%E3%83%B3%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%82%A6%E3%82%A7%E3%83%96" target=_blank">セマンティック・ウェブ</a>による（<a href="https://ja.wikipedia.org/wiki/Resource_Description_Framework" target=_blank">RDF</a>を用いた）生命科学データベースの統合」が重要な目標です（これだけが目標ではないが、大きな目標であるのは確かです）。</p>
+<p>　これに対して質量分析関連分野では、RDFやセマンティック・ウェブは中心的な問題ではありません（もちろん、データベース統合には重要なので、質量分析関連分野の公的データベース、即ちメタボライトを中心とする<a href="http://www.massbank.jp/" target=_blank">MassBank</a>、糖鎖の一連のデータベース（<a href="https://glycosmos.org/" target=_blank">GlyCosmos</a>）、それにプロテオームの<a href="https://jpostdb.org/" target=_blank">jPOST</a>といったデータベースは、セマンティック・ウェブを念頭に置いたり、RDFを用いて開発されています。しかしそれ以外のところでRDFが必要になることは当面ありません）。むしろこの分野では、解析に必要な計算科学的な問題への対応が重要な目標です。</p>
+
+<p>　従ってバイオハッカソンと本ハッカソンは切り離して考えてきたのですが、財政的な面も考えるとやはり共同開催が効率的である、と判断し、最終的に、「別個のハッカソンを同じ会場で実施する」「両者（参加者）の交流は大いに推奨する」という考えに基づき、今年度のDBCLS「<a href="http://wiki.lifesciencedb.jp/mw/BH17.11" target=_blank">国内版バイオハッカソン（以下「BH」）BH17.11</a>」と一体的に行うことになりました。</p>
+    <p>　またこれを機に、ゲノム系の研究が中心である日本の（一般的な）バイオインフォマティクス研究コミュニティとの、交流・協力関係を深めることを目的に加えました。</p>
+ 
+<br>
+    
+    <h3>ハッカソンの告知</h3>    
+
+    <p>　今回のハッカソン開催にあたっては、バイオハッカソン側が自前のメーリングリストに、我々も同じくメーリングリストに告知を流した他、ワークショップのときと同様、以下の学会･団体のweb・SNS・メーリングリストなどに告知を掲載していただきました：</P>
+
+        <ul style="margin-left:40px;">
+    <li><a href="http://www.jsbi.org/">日本バイオインフォマティクス学会(JSBi)</a></li>
+    <li><a href="http://www.mssj.jp/">日本質量分析学会(MSSJ)</a></li>
+    <li><a href="https://www.jhupo.org/">日本プロテオーム学会(JPrOS/JHUPO)</a></li>
+    <li><a href="http://www.ipsj.or.jp/katsudou/sig/sighp/bio/">情報処理学会(SIG-BIO)</a></li>
+    <li><a href="http://www.mbsj.jp/">日本分子生物学会</a></li>
+    <li><a href="http://www.jbsoc.or.jp/">日本生化学会</a></li>
+    <li><a href="https://www.biophys.jp/">日本生物物理学会</a></li>            
+    <li><a href="http://rings.t.soka.ac.jp/wakate/index.html">糖鎖インフォマティクス若手の会</a></li>
+    <li><a href="http://scienceportal.jst.go.jp/">サイエンスポータル</a></li>  
+    <li><a href="http://www.lifescience.mext.go.jp/">文部科学省・ライフサイエンスの広場</a></li>
+    <li><a href="http://www.jba.or.jp/pc/">バイオインダストリー協会</a></li>
+    <li><a href="http://www.mspp.ninja/?page_id=76">Mass++ユーザー会</a></li>
+</ul>
+
+
+          <p>　もし「他にこのような団体に広告を掲載した方がいい」といったご意見などがありましたら、本会世話人 (<a href="mailto:ms-bioinfo-admin@googlegroups.com">ms-bioinfo-admin@googlegroups.com</a>)　まで、もしくは<a href="mailto:ms-bioinfo@googlegroups.com">研究会メーリングリスト</a>までお寄せください。</p>
+
+<br>
+    
+    
+        <h3>参加者について</h3>
+
+<img src="./images/2017h/attendee.png" width="650">
+    
+        <p style="font-size: 80%; color: navy;">　図中で、過去に一度でもDBCLSバイオハッカソンに参加した経験のある人は、「参加経験者」に分類した。
+「参加非経験者」は「本ハッカソン参加者の中で、バイオハッカソン(BH)参加経験のない人」（即ち、「全くの新規参加者」）。なお「バイオハッカソン(BH)側の参加者で、初参加の人」は、この「参加非経験者」の中にはカウントしていない（46人の中に含まれている）。
+</p>
+    
+<br>
+    
+<p>　研究コミュニティの規模及び今まで本研究会で行ってきたワークショップの参加人数（60名強）から、このような大会に参加して開発作業に直接コミットする研究者は15名程度であると見込んでいたのですが、最終的な参加者は24名、予想を大きく上回わりました。更に、共同開催のBHの最近の参加人数は40名台後半でしたが、今回、（実質的に一体として運営された）両ハッカソンの合計参加人数は70名と飛躍的に増加。本ハッカソンを共同開催の形で実施したことの効果は、「参加人数」という形で明確に現れたと言えます（上図参照）。</p>
+        
+<br>
+        
+        <h3>初日ミーティング</h3>        
+        
+<p>　当初予定ではハッカソン開始の前日（初日）に、「ハッカソンでどのようなテーマを選ぶか」について、本ハッカソンのメンバー間でミーティングを持ち、討論を行う予定にしていました。しかしBH参加者に対してもこのミーティングへの参加を開放したところ、本ハッカソン参加者（24名）とほぼ同数（23名）の参加表明がありました。また「質量分析分野の研究について、簡単でいいからセミナーをして欲しい」という要望もありました。</p>
+<p>　そこで急遽、初日に「ゲノム系バイオインフォマティクス（特にDBCLSが公開しているバイオインフォマティクス・リソース）」と「質量分析学に関わるインフォマティクス研究」の両方の分野から、互いに相手に研究内容を紹介することを意図した、<a href="./2017hws.html">チュートリアル的な講演会を企画</a>しました。実施1ヶ月半前の緊急の立案でしたが、最終的に各分野の第一線の研究者に依頼することができたと考えています。</p>
+
+<img src="./images/2017h/day1a.jpg" width="630">
+<br>
+    
+<p>　当日は午後2時からの開始であったため、大多数の参加者（筆者も）は午前中に熊本入りすると考えられたのですが、当日の熊本空港は濃霧で航空便が混乱。ちなみに筆者の便は午後11時着陸の予定が、10分程度遅延していました。その程度なら問題ではないのですが、その後遅延が拡大し、特に正午前着陸の東京からの便（講演者の一部を含むかなりの数の参加者が搭乗）は熊本市上空で旋回を続け（「最悪の場合は福岡空港に着陸する」とのアナウンスも！）、1時間弱の空中待機の後に…漸く熊本に着陸できた、という有様でした（ひやひや）。</p>
+<p>　のっけからケチがついて、参加できない人が続出する事態を危惧したのですが、最終的に（47人の参加表明者中）42人が参加されました（同便に搭乗していた講演者は、講演順が回ってくる10分前に会場に到着する、という綱渡り…）。</p>
+    
+
+<img src="./images/2017h/day1b.jpg" width="630">
+
+<br>    
+    
+    <p>　なお当日の講演は撮影し、（DBCLSがYouTubeを使って公開している）「<a href="http://togotv.dbcls.jp/" target="_blank">TogoTV（統合TV）</a>」のコンテンツとして公開することを計画していたのですが、機器トラブルのために音声状態が極端に悪く、現時点では公開保留になっています。</p>
+
+<p>　講演会の後の「討論」については、（座長の積極的な誘導ではなく）「自発的なグループ討論」という形で進めましたが、各自の関心のある内容ごとに“研究者のクラスター”が2分ほどで幾つも形成され、クラスターごとに時間ぎりぎりまで熱心な討論が続いていました（最終的に、レセプション移行時間になったため、座長が強制的に討論タイムを打ち切りました）。</p>
+    <p>　ここでできた緩やかなグループ単位で、翌日からのハッカソンでは共同作業が始まることになります（作業の進行具合によっては、複数のグループにまたがった作業や、グループ替えなども行われることになります。…まぁ、基本的には、「誰と何をどうやるか、全て自由」ですので）。
+    </p>
+
+<br>
+    
+
+<img src="./images/2017h/day1c.jpg" width="630">
+    <p style="font-weight: bold;">↑休憩中</p>    
+
+<br>
+    
+    <p>　なおこの会合実施のために、情報・システム研究機構(ROIS)・<a href="https://ds.rois.ac.jp/" target="_blank">データサイエンス共同利用基盤施設（DS施設）</a>の公募型共同研究予算「ROIS-DS-JOINT 共同研究集会」に応募し、幸い採択されたため、初日の会合のためにはこの予算も使用しています（ROIS-DS-JOINT(006RM2017)）。</p>
+    <p>　またレセプション費用は本質的には参加者の実費負担でしたが、<a href="http://www.kumamoto-icb.or.jp/" target="_blank">熊本国際観光コンベンション協会</a>からDBCLSが取得した「コンベンション開催助成金」（用途無制限）も利用しています。レセプションの一部の料理や、レセプションとその後の夜に登場した地酒類（の一部）は、この予算によるものです（全額を地元で消費できました）。</p>
+        
+<br>
+    
+    <h3>ハッカソン本体</h3>    
+    
+<br>
+    
+    <img src="./images/2017h/prepare.jpg" width="630">
+        
+<br>
+    
+    <p style="font-weight: bold;">準備して…</p>    
+
+<br>
+    
+    <img src="./images/2017h/hack.jpg" width="630">
+        
+<br>
+    
+        <p style="font-weight: bold;">ハックして！　（おや、温泉上がりで既に浴衣の人も…）</p>    
+
+<br>
+    
+    <img src="./images/2017h/lunch.jpg" width="630">
+        
+<br> 
+    
+    <p style="font-weight: bold;">メシ食って…</p>    
+
+<br>
+    
+    <img src="./images/2017h/subgroup.jpg" width="630">
+        
+<br> 
+    
+    <p style="font-weight: bold;">打ち合わせして！（毎日のようにサブグループのミーティングも開かれていました）</p>    
+
+<br>
+    
+    <img src="./images/2017h/supper.jpg" width="630">
+        
+<br>
+    
+    <p style="font-weight: bold;">晩飯食って…</p>    
+
+<br>
+    
+    <img src="./images/2017h/alcohol.jpg" width="630">
+        
+<br>
+        
+    <p style="font-weight: bold;">でやっぱり飲むんかい＿|￣|○</p>    
+
+<br>
+    
+<p>　…というわけで、皆さん大変盛り上がり、楽しんで、集中されていたのでした！</p>    
+    
+<br>
+    
+    <p>　なお、DBCLS国内版バイオハッカソンと共通で、各参加者（のグループ）の簡単な作業報告をオンライン上にまとめ、公開しています。</p>
+    
+<a href="https://tinyurl.com/bh17-11-slides" target="_blank">https://tinyurl.com/bh17-11-slides</a>
+
+<br>    
+    
+    <p>　まだ数は少ないものの、ゲノム系研究者と質量分析系研究者のコラボレーションも幾つか発生しています。</p><br>
+    <p>　さて、ここで得られた“結果”は、本当に“モノになって”いるのでしょうか？</p>
+    <p>　これは評価が難しく、一概には言い切れません。しかしご覧になってお判りのように、既に一般的な発表に値するレベルの結果が得られているものも少なくありませんし、また例えば、筆者個人が（ちょっとだけ）関わっていて状況をよく知っているプロジェクトから例を挙げると、上記の公開作業報告にも記載されている「Mass++」の場合は、ここでの成果を踏まえて、今年2018年の <A href="https://www.asms.org/conferences/annual-conference/annual-conference-homepage">ASMS（米質量分析学会）</A>でのポスター発表を行うことになっています。
+    </p>
+    
+    <br>
+    
+    <p>　また、「研究会としての企画」が、このハッカソンを機に始まっています。</p>
+    <p>　質量分析データの解析で最も標準的な方法は？初歩から勉強するのに適切な総説は？これこれしかじかの処理をしたいのだが、適切なソフトウェアはないのか？</p>
+    <p>　こういった悩みは頻繁に生じると思いますが、現状では決定版といえるような資料は殆ど見当たりません。そこで、解析プロトコル、適切と思われる文献、ソフトウェアの情報などを収集し、また更に必要に応じて（オープンソースの）ソフトウェア自体をホストしよう、というのがこの企画の目標です。これは今後も年単位で継続し、情報を研究会のwebに集約していく予定です。会員の方、ご興味があれば是非、ご参加下さい！
+    </p>
+  
+
+<BR>    
+  
+
+    <h3>学生参加者への旅費補助</h3>　
+
+    <p>　この分野の（少なくとも、この分野に知識や関心のある）若手研究者を増加させることを（最終的な）目標として、学生に対する旅費の補助を行うことは、当初から計画していました。</p>
+<p>　「会場のホテルに宿泊する（＝相部屋なので、自動的にこの分野の知り合いができる）」こと（及び下に述べる他の条件）を条件として、4名に対して「交通費と宿泊費を支給する」
+    という方針で、更に幾つかの<a href="/2017h.html#promotion">参加条件</a>をつけました。</p>
+    <p>　しかし結果的には、非常に残念なことに1名しか応募がありませんでした。この「学生参加人数」の問題は、今回の最大の問題であると考えています。</p>
+
+<br> 
+    
+    
+    <h3>今後の課題</h3>
+    
+    <p>最後に、今後のハッカソンとその課題について、主催者としての認識を述べます。</p>
+
+        <dl>
+    
+    <dt>企画自体</dt>
+    <dd>　参加人数が多かったことからも、時宜を得た企画であったと考えています。また関係学会のメンバー（研究者）からも「良い企画だ」と歓迎の言葉をいただいています。従って同様の形態・企画を今後も継続する予定です。DBCLSとは、少なくとも2018年度も共同開催する方向で検討中です。</dd>
+    <br>
+    <dt>初日ミーティング</dt>
+    <dd>　今年度は急遽立案したため短時間で荒削りの企画となりましたが、2018年度はより長い準備時間を使って、より大規模な会を企画しています。</dd>
+    <br>
+    <dt>学生への旅費補助</dt>
+    <dd>　「学生参加者が少ない」ことは最大の課題であると考えていますが、この対策は難しい。「（世話人が）個人的によく知っている研究者」に声をかけて、潜在的な学生参加者を掘り起こしてもらうことはおそらく可能ですが、その場合は旅費補助の選定での公正性が問題になる危険があります。<br>　このため、「より徹底した広報」と「（今回は全日程参加を義務づけたため）部分日程参加を認める」形にして条件を緩和する、夏期休暇や冬期休暇など、学生が参加しやすい時期に実施する、などの対応が必要と考えています。</dd>
+<br>
+    
+    </dl>
+    
+<br>
+    
+    <h3>今後の予定</h3>
+    
+    <p>　4月23日には、<a href="./2018ws.html">今年のワークショップ</a>をJST本部（今年は今まで2回と違って、サイエンスプラザのある本館ではなく、K's五番町の別館です）で行います。
+    また第2回のハッカソンも準備中です。更に他の企画も進行中です。
+    </p>
+    <p>　また、早くも2019年のハッカソンの開催についてご提案を頂いており（嬉しい驚きですが、半ば“向こうから転がり込んで来た”状態で…）、企画が始まっています。皆様の積極的なご参加をお待ちしています。</p>
+    
+    <br>
+    
+   
+<div style="width: 33em; margin-left: auto;">
+<p style="padding-left: 5em; text-indent: -5em;">
+    世話人：　吉沢 明康 （<a href="http://www.pharm.kyoto-u.ac.jp/">京都大学大学院薬学研究科</a>）<br>
+    河野　 信 （<a href="http://dbcls.rois.ac.jp/">ライフサイエンス統合データベースセンター</a>）<br>
+    守屋 勇樹 （<a href="http://dbcls.rois.ac.jp/">ライフサイエンス統合データベースセンター</a>）          
+</p>
+</div>
+
+
+    
+<br>    
+<hr style="margin-top: 50px;">
+<br>
+ 
+<p style="text-align: right; font-style: italic;">
+Page Last Updated: Feb. 24, 2019
+<!--#config timefmt="%y/%m/%d" -->
+<!--#echo var="DATE_LOCAL" -->
+</p>
+    
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <!-- footer class="inner" -->
+
+      <footer class="inner" style="  max-width: 720px;">
+        <p>Published with <a href="https://pages.github.com/">GitHub Pages</a>. &copy; 2016-2019, Mass Spec Informatics SIG, All rights reserved.</p>
+        <div style="text-align:right;">
+          <img src="images/ms-bio.info_logo_b.svg" width="200" style="border:0px; margin: 0px 0px 0px 0px; box-shadow: none;-webkit-box-shadow: none;-moz-box-shadow: none;-obox-shadow:none;-ms-box-shadow:none;">
+        </div>
+      </footer>
+</div>
+  
+
+</body></html>
+
